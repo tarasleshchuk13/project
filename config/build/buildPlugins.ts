@@ -15,8 +15,6 @@ export function buildPlugins({ paths, isDev }: BuildOptions): webpack.WebpackPlu
             filename: 'css/[name].[contenthash:8].css',
             chunkFilename: 'css/[name].[contenthash:8].css',
         }),
-        new webpack.HotModuleReplacementPlugin(),
-        new ReactRefreshWebpackPlugin(),
         new webpack.DefinePlugin({
             __IS_DEV__: JSON.stringify(isDev),
         }),
@@ -24,6 +22,7 @@ export function buildPlugins({ paths, isDev }: BuildOptions): webpack.WebpackPlu
     
     if (isDev) {
         plugins.push(new webpack.HotModuleReplacementPlugin())
+        plugins.push(new ReactRefreshWebpackPlugin())
         plugins.push(new BundleAnalyzerPlugin({ openAnalyzer: false }))
     }
     
