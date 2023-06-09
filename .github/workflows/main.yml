@@ -34,7 +34,4 @@ jobs:
       - name: screenshot testing
         run: npm run storybook:build && npm run tests:ui:ci
         if: always()
-        steps:
-          - name: screenshot testing1
-            run: npm run tests:ui:ci
 
