@@ -47,6 +47,7 @@ module.exports = {
         semi: 0,
         'no-trailing-spaces': 0,
         'react/jsx-tag-spacing': 0,
+        'linebreak-style': 0,
     },
     globals: {
         __IS_DEV__: true,
