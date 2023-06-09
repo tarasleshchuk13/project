@@ -14,7 +14,7 @@ type Story = StoryObj<typeof Button>;
 
 export const Primary: Story = {
     args: {
-        children: 'Test button 1',
+        children: 'Test button',
     },
 }
 
